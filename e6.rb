@@ -1,8 +1,18 @@
 
 def reverse_words(str)
-  str.split('').reverse.join('')
+  temp = []
+  str = str.split(' ')
+  str.each do |word|
+    if word.length < 5
+      temp << word
+    else
+      temp << word.reverse
+    end
+  end
+  temp.join(' ')
 end
 
-puts reverse_words('Professional')          # => lanoisseforP
-puts reverse_words('Walk around the block') # => Walk dnuora the kcolb
-puts reverse_words('Launch School')
+
+p reverse_words('Professional')          # => lanoisseforP
+p reverse_words('Walk around the block') # => Walk dnuora the kcolb
+p reverse_words('Launch School')
