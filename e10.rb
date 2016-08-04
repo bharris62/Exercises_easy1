@@ -2,7 +2,7 @@
 # as 2nd arg on whether they get one or not
 
 def calculate_bonus(sal,bool)
-  sal / 2 if bool # if true, returns the number, else it passes. 
+  bool ? sal / 2 : 0 # if true, returns the number, else it passes.
 end
 
 
